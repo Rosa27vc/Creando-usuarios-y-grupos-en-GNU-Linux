@@ -1,0 +1,14 @@
+
+Crear un grupo llamado casa
+groupadd casa
+Dentro del grupo casa crear 2 usuarios, uno con el nombre de su papá o mamá y el otro usuario seria su nombre.
+cat  /etc/group
+
+useradd Victor
+adduser Victor casa
+useradd Rosa
+adduser Rosa casa
+
+cat /etc/group
+
+groupmod -g 1004 -n Familia casa
