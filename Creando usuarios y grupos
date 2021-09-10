@@ -1,14 +1,30 @@
+........................................
+CREANDO USUARIOS Y GRUPOS EN GNU-Linux
+........................................
 
-Crear un grupo llamado casa
+Paso 1: Acceder como usuario root
+login: root
+password: 
+
+Paso 2: Creacion de un grupo llamado casa
 groupadd casa
-Dentro del grupo casa crear 2 usuarios, uno con el nombre de su papá o mamá y el otro usuario seria su nombre.
+
+Paso 3: Listar los grupos que tenemos en el sistema, y asi verificar si se creo el grupo "casa" 
 cat  /etc/group
 
+Paso 4: Crear 2 usuarios, con el nombre de uno de mis padres y el otro con mi nombre
 useradd Victor
-adduser Victor casa
 useradd Rosa
+
+Paso 5: Agregar los dos usuarios al grupo casa
+adduser Victor casa
 adduser Rosa casa
 
+Paso 6: Verificamos que los usuarios se hayan creado dentro del grupo "casa"
 cat /etc/group
 
+Paso 7: Cambiamos el nombre del grupo "casa" a "Familia"
 groupmod -g 1004 -n Familia casa
+
+Paso 8: Verificamos que el nombre se ha modificado
+cat /etc/group
